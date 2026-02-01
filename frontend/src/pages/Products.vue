@@ -13,6 +13,7 @@
             v-for="product in products" 
             :key="product.id"
             v-bind="product"
+            @click="openLink()"
           />
         </div>
       </div>
@@ -28,38 +29,21 @@ import ProductCard from '../components/ProductCard.vue'
 const products = [
   {
     id: 1,
-    name: "Classic Tiramisu",
-    price: "NT$ 180",
+    name: "經典義式提拉米蘇",
+    price: "NT$ 130",
     description: "Our signature dessert. Espresso-dipped ladyfingers layered with a light and airy mascarpone cream, finished with premium cocoa powder.",
-    image: "/images/tiramisu.png"
+    image: "/images/提拉米蘇.jpg"
   },
   {
     id: 2,
-    name: "Bordeaux Canelé",
-    price: "NT$ 85",
+    name: "法式可麗露",
+    price: "NT$ 60",
     description: "A masterpiece of texture. Crunchy caramelized exterior giving way to a soft, custardy interior with hints of vanilla and rum.",
-    image: "/images/canele.png"
-  },
-  {
-    id: 3,
-    name: "Matcha Tiramisu",
-    price: "NT$ 190",
-    description: "A Japanese twist on the classic. Premium Uji matcha powder layered with creamy mascarpone.",
-    image: "/images/tiramisu.png"  // Reusing image for demo
-  },
-  {
-    id: 4,
-    name: "Canelé Box Set (6pcs)",
-    price: "NT$ 480",
-    description: "Share the joy with a box of 6 freshly baked canelés. Perfect for gifting or gatherings.",
-    image: "/images/canele.png" // Reusing image for demo
-  },
-  {
-    id: 5,
-    name: "Afternoon Tea Set",
-    price: "NT$ 650",
-    description: "A curated selection including 2 Tiramisu cups and 4 Canelés.",
-    image: "/images/hero-1.png"
+    image: "/images/可麗露.jpg"
   }
 ]
+
+function openLink() {
+  window.open('https://myship.7-11.com.tw/general/detail?id=GM2602013174313', '_blank')
+}
 </script>

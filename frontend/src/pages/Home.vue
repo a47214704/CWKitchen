@@ -31,6 +31,7 @@
             v-for="product in featuredProducts" 
             :key="product.id"
             v-bind="product"
+            @click="openLink()"
           />
         </div>
 
@@ -56,24 +57,21 @@ import ProductCard from '../components/ProductCard.vue'
 const featuredProducts = [
   {
     id: 1,
-    name: "Classic Tiramisu",
-    price: "NT$ 180",
+    name: "經典義式提拉米蘇",
+    price: "NT$ 130",
     description: "Layers of coffee-soaked ladyfingers and mascarpone cream, dusted with cocoa.",
-    image: "/images/tiramisu.png"
+    image: "/images/提拉米蘇.jpg"
   },
   {
     id: 2,
-    name: "Bordeaux Canelé",
-    price: "NT$ 85",
+    name: "法式可麗露",
+    price: "NT$ 60",
     description: "Traditional French pastry with a caramelized crust and tender custard center.",
-    image: "/images/canele.png"
-  },
-  {
-    id: 3,
-    name: "Assorted Box",
-    price: "NT$ 520",
-    description: "A perfect gift selection of our finest desserts.",
-    image: "/images/hero-1.png"
+    image: "/images/可麗露.jpg"
   }
 ]
+
+function openLink() {
+  window.open('https://myship.7-11.com.tw/general/detail?id=GM2602013174313', '_blank')
+}
 </script>
