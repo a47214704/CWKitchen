@@ -5,12 +5,16 @@
         <img :src="slide.image" class="w-full h-full object-cover" :alt="slide.title">
         <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
           <div class="text-center text-white space-y-4">
-            <h2 class="text-5xl font-serif font-bold tracking-widest drop-shadow-md">{{ slide.title }}</h2>
-            <p class="text-xl tracking-wider font-light drop-shadow-sm">{{ slide.subtitle }}</p>
-            <router-link to="/products"
-              class="inline-block mt-8 px-8 py-3 bg-white/90 hover:bg-white text-stone-800 tracking-widest font-medium transition-all duration-300 backdrop-blur-sm">
-              EXPLORE
-            </router-link>
+            <h2 class="text-5xl font-serif font-bold tracking-widest drop-shadow-md animate-hero animate-hero-title">{{
+              slide.title }}</h2>
+            <p class="text-xl tracking-wider font-light drop-shadow-sm animate-hero animate-hero-subtitle">{{
+              slide.subtitle }}</p>
+            <div class="animate-hero animate-hero-button">
+              <router-link to="/products"
+                class="inline-block mt-8 px-8 py-3 bg-white/90 hover:bg-white text-stone-800 tracking-widest font-medium transition-all duration-300 backdrop-blur-sm">
+                EXPLORE
+              </router-link>
+            </div>
           </div>
         </div>
       </div>
