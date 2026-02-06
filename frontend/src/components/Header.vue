@@ -91,7 +91,7 @@ const headerBgClass = computed(() => {
 
 // Text color - white on transparent, dark on white background
 const textColorClass = computed(() => {
-  if (isHomePage.value && !isScrolled.value) {
+  if (isHomePage.value && !isScrolled.value && !isMenuOpen.value) {
     return 'text-white drop-shadow-md'
   } else {
     return 'text-stone-800'
